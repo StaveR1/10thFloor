@@ -24,7 +24,7 @@ function updateSlider() {
     const slideStyle = window.getComputedStyle(slides[0]);
     const slidePaddingLeft = parseFloat(slideStyle.paddingLeft);
     const slidePaddingRight = parseFloat(slideStyle.paddingRight);
-    const slideWidth = slides[0].offsetWidth + slidePaddingLeft + slidePaddingRight;
+    const slideWidth = slides[0].offsetWidth;
 
     // Перевіряємо, чи currentIndex не виходить за межі
     const totalSlides = slides.length;
@@ -76,15 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Закрити всі інші відкриті відповіді
             faqQuestions.forEach(otherQuestion => {
-                const otherAnswer = otherQuestion.nextElementSibling;
-                const otherArrow = otherQuestion.querySelector('.arrow');
+                if (otherQuestion !== question) {
+                    const otherAnswer = otherQuestion.nextElementSibling;
+                    const otherArrow = otherQuestion.querySelector('.arrow');
 
-                // Якщо інше питання активне і це не поточне питання
-                if (otherQuestion.classList.contains('active') && otherQuestion !== question) {
-                    otherQuestion.classList.remove('active');
-                    otherAnswer.classList.remove('open');
-                    otherArrow.style.transform = 'rotate(0deg)';
-                    otherAnswer.style.maxHeight = '0'; // Забезпечити, що висота встановлюється на 0
+                    if (otherQuestion.classList.contains('active')) {
+                        otherQuestion.classList.remove('active');
+                        otherAnswer.classList.remove('open');
+                        otherArrow.style.transform = 'rotate(0deg)';
+                        otherAnswer.style.maxHeight = '0';
+                    }
                 }
             });
 
@@ -94,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (answer.classList.contains('open')) {
                 arrow.style.transform = 'rotate(180deg)';
-                // Встановлюємо maxHeight на scrollHeight + padding для точного розгортання
                 answer.style.maxHeight = answer.scrollHeight + 'px';
             } else {
                 arrow.style.transform = 'rotate(0deg)';
@@ -115,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Закриття меню при натисканні на посилання (для односторінкових сайтів)
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
             });
         });
     }
