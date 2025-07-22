@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
-  <bod>
+  <body>
     <header>
       <div class = "black_link">
         <p>+380 93 299 1010</p>
@@ -18,13 +18,16 @@
       </div>
       <nav>
         <p class = "logo">10thFloor</p>
-        <div>
+        <div class="nav-links" id="nav-links">
             <a href = "#about">Про нас</a>
             <a href = "#services">Послуги</a>
             <a href = "#events">Види заходів</a>
             <a href = "#price">Прайс</a>
             <a href = "#FAQ">Часті запитання</a>
             <a href = "#contacts">Зв'язок з нами</a>
+        </div>
+        <div class="hamburger" id="hamburger-menu">
+            <span>&#9776;</span>
         </div>
       </nav>
       <section class="hero">
@@ -64,8 +67,8 @@
   </section>
     
    
-    <section class="services-section">
-    <h2 id="services">Наші послуги</h2>
+    <section class="services-section" id="services">
+    <h2>Наші послуги</h2>
     <p class="subtitle">Просто залиште нам деталі і дозвольте собі, вашим друзям та родині насолодитися святом</p>
        <div class="grid-container">
       <div class="service-item" style="background-image: url('https://github.com/StaveR1/10thFloor/blob/main/6.png?raw=true');">
@@ -132,10 +135,11 @@
       </div>
     </div>
   </section>
-      <section class = "services">
- <h2 id="price">Прайс-лист</h2>
+      <section class = "services" id="price">
+ <h2>Прайс-лист</h2>
     <p class="subtitle">Виберіть один з наших тарифів або зв'яжіться з нами, щоб отримати індивідуальну пропозицію</p>
-      <p style = "text-align:center"><img src = "https://github.com/StaveR1/10thFloor/blob/main/17.jpg?raw=true" width = "50%"></p>
+      <p style = "text-align:center"><img src = "https://github.com/StaveR1/10thFloor/blob/main/17.jpg?raw=true" class="price-image"></p>
+     </section>
       <div class="container" id = "FAQ">
         <h1>Маєте питання щодо Наших послуг?</h1>
         <h2>Ми відповіли на найпоширеніші запитання</h2>
@@ -144,7 +148,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     Чи можна орендувати ваш простір без організації?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Так. Простір 10th Floor доступний для оренди. Ви можете самі організовувати подію або залучати своїх підрядників. Ми залишаємося поруч, якщо потрібна допомога.</p>
@@ -154,7 +158,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     У вас є ведучий / фотограф / діджей / кейтеринг?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Так, у нас є своя база перевірених підрядників. Ми підбираємо команду під формат події та ваш бюджет. І завжди — тільки тих, хто реально класний.</p>
@@ -164,7 +168,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     А скільки коштує організація події?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Ціна залежить від формату, кількості гостей, складності сценарію та підрядників. Але базова координація стартує від <span class="price">2500 грн</span>, а івент “під ключ” — від <span class="price">4500 грн</span>. Завжди робимо індивідуальний прорахунок.</p>
@@ -174,7 +178,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     Як довго триває підготовка до події?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Мінімальний термін 5-7 днів (для простих форматів), оптимально 2-3 тижні. Якщо у вас є точна дата, то краще бронювати завчасно.</p>
@@ -184,7 +188,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     Ви організовуєте тільки в своєму просторі?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Ні. Ми працюємо як у просторі 10th Floor, так і на виїзді: інші локації, приватні будинки, ресторани або відкритий простір — усе можливо.</p>
@@ -194,7 +198,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     А якщо я не знаю, що саме хочу?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Це нормально :) Ви розповідаєте нам про людину або привід — і ми запропонуємо концепцію, сценарій, варіанти оформлення та усе, що може “зайти”.</p>
@@ -204,7 +208,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     Скільки гостей вміщує ваша локація?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Наш простір гнучкий і адаптується під різні формати.</p>
@@ -215,7 +219,7 @@
           <div class="faq-item">
                 <div class="faq-question">
                     Ми вперше організовуємо подію. Чи допоможете з підрядниками і порадами?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Так! Для таких випадків ми підготували спеціальний чекліст і консультаційний пакет.</p>
@@ -234,7 +238,7 @@
             <div class="faq-item large-question">
                 <div class="faq-question">
                     Чим відрізняється просто оренда простору, координація події та повна організація? Що саме входить у кожен з цих варіантів і що нам обрати, якщо ми хочемо, щоб все пройшло без стресу, але частину питань вирішимо самі?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p><b>● Оренда простору</b></p>
@@ -266,7 +270,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     Як подати заявку на організацію?
-                    <span class="arrow">&#x2304;</span>
+                    <span class="arrow">⌄</span>
                 </div>
                 <div class="faq-answer">
                     <p>Натисніть кнопку <span style = "color:#ff6600">“Подати заявку”</span> на сайті або напишіть нам в Instagram/Telegram. Ми з вами зв’яжемось, уточнимо деталі і запропонуємо варіанти.</p>
@@ -279,18 +283,25 @@
         </div>
     </div>
       
-        <section >
-        <iframe class="madtext" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.3587404837704!2d25.920052915278323!3d48.264720228660856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47340f17c06e62f5%3A0xc3c3d8abdd238ca1!2s10th%20Floor!5e0!3m2!1suk!2sua!4v1753205177357!5m2!1suk!2sua" width="100%" height="250px"></iframe>
-        <div class = "adress-absolute">
-          <h3>Адреса</h3>
-          <h4>нашого простору</h4>
-          <p>м. Чернівці, вул. Рівненська, 5а</p>
-          <p>(неподалік ТЦ Майдан)</p>
-          <p>+380 93 299 1010</p>
-        </div>
+        <section class="contact-section">
+            <iframe 
+                class="madtext" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.493863499497!2d25.95360931565463!3d48.2774919792359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473408d81e0586af%3A0x76e5d8b7b84f3e69!2z0LLRg9C70LjRhtGPINCg0ZbQstC90YDRjNC60LDRjywgNSwg0KfQltGA0L3RltCy0YbRliwg0KfQltGA0L3RltCy0LDRhtC40YDRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNTgwMDI!5e0!3m2!1suk!2sua!4v1672605969511!5m2!1suk!2sua" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="adress-absolute">
+              <h3>Адреса</h3>
+              <h4>нашого простору</h4>
+              <p>м. Чернівці, вул. Рівненська, 5а</p>
+              <p>(неподалік ТЦ Майдан)</p>
+              <p>+380 93 299 1010</p>
+            </div>
         </section>
-         <script src="script.js"></script>
-    
     </main>
         <footer class="site-footer" id = "contacts">
       <div class="footer-content">
@@ -301,25 +312,25 @@
 
         <div class="footer-column">
           <ul>
-            <li><a href="about">Про нас</a></li>
-            <li><a href="services">Послуги</a></li>
-            <li><a href="events">Види заходів</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#events">Види заходів</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <ul>
-            <li><a href="price">Прайс</a></li>
-            <li><a href="FAQ">Часті запитання</a></li>
-            <li><a href="contacts">Зв’язок з нами</a></li>
+            <li><a href="#price">Прайс</a></li>
+            <li><a href="#FAQ">Часті запитання</a></li>
+            <li><a href="#contacts">Зв’язок з нами</a></li>
           </ul>
         </div>
 
         <div class="footer-column social">
           <p>Слідкуйте за нами</p>
           <div class="social-icons">
-            <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram"></a>
+            <a href="https://www.instagram.com/10floor.cv/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
+            <a href="https://t.me/+380932991010"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram"></a>
           </div>
         </div>
       </div>
@@ -331,5 +342,6 @@
         <p>All rights Reserved</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
