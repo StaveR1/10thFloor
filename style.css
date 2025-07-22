@@ -140,13 +140,13 @@ nav a:hover{
 
 .hero h1 {
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   margin-bottom: 40px;
 }
@@ -232,12 +232,12 @@ nav a:hover{
 .event-content h1 {
   font-size: 32px;
   margin-bottom: 16px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .event-content .highlight {
   color: #f37021;
-  font-weight: 600;
+  font-weight: 400;
   font-style: italic;
   margin: 16px 0;
   text-align:center;
@@ -443,7 +443,7 @@ nav a:hover{
   text-align: center;
   color: #ffffff;
   font-size: 40px; /* Збільшений розмір заголовка FAQ */
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
@@ -451,7 +451,7 @@ nav a:hover{
   text-align: center;
   color: #dddddd;
   font-size: 24px; /* Збільшений розмір підзаголовка FAQ */
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 50px; /* Збільшений відступ до FAQ сітки */
 }
 
@@ -495,7 +495,7 @@ nav a:hover{
   align-items: center;
   padding: 20px 30px; /* Збільшив внутрішні відступи */
   font-size: 18px; /* Збільшив розмір шрифту питання */
-  font-weight: 600; /* Зробив шрифт трохи товстішим */
+  font-weight: 400; /* Зробив шрифт трохи товстішим */
   color: #ffffff;
   cursor: pointer;
   user-select: none;
@@ -563,7 +563,7 @@ nav a:hover{
 
 .faq-answer span.price {
   color: #f7a70c;
-  font-weight: 700; /* Зробив ціну жирнішою */
+  font-weight: 500; /* Зробив ціну жирнішою */
 }
 
 /* Кнопка "ПОДАТИ ЗАЯВКУ" */
@@ -834,7 +834,7 @@ nav a:hover{
 
 .footer-column.social p {
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 300;
   text-align:center;
 }
 .social-icons {
