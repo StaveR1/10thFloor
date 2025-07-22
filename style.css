@@ -928,3 +928,14 @@ hr {
     margin-bottom: 10px;
     line-height: 1.5;
 }
+/* Animation for scroll-in elements */
+.scroll-in-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-in-animation.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
