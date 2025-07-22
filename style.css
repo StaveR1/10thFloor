@@ -1,0 +1,921 @@
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+}
+
+.black_link{
+  padding:10px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #202020;
+  height: 30px;
+  align-items:center;
+}
+
+.logo{
+  font-family: "Manrope", sans-serif;
+  font-size:32px;
+  margin-left:20px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+nav a{
+  color: black;
+  padding:20px;
+  letter-spacing:1px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  height:70px;
+  align-items:center;
+  padding: 0 20px; /* Додано відступи для навігації */
+}
+nav a:hover{
+  color:#ff6600;
+}
+
+/* Стилі для гамбургер-меню */
+.hamburger {
+    display: none; /* Приховано за замовчуванням на великих екранах */
+    font-size: 28px;
+    cursor: pointer;
+    color: #333; /* Колір іконки */
+}
+
+.nav-links {
+    display: flex;
+}
+
+/* Медіа-запит для мобільних пристроїв */
+@media (max-width: 768px) {
+    .black_link {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+    .black_link p {
+        margin: 5px 0;
+    }
+    .black_link div {
+        margin-top: 10px;
+    }
+
+    nav {
+        flex-direction: row; /* Залишаємо лого та гамбургер в одному рядку */
+        justify-content: space-between;
+        padding: 10px 20px;
+        height: auto;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .hamburger {
+        display: block; /* Показати гамбургер-меню на мобільних */
+    }
+    .nav-links {
+        display: none; /* Приховати посилання за замовчуванням */
+        flex-direction: column;
+        width: 100%;
+        background-color: #f8f8f8; /* Фон для відкритого меню */
+        position: absolute;
+        top: 100px; /* Під навігацією */
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.active {
+        display: flex; /* Показати посилання при активному меню */
+    }
+    .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+
+.hero {
+  background-image: url('https://res2.weblium.site/res/68760471c36aafc055720403/6876109bf7269931b26a0d12?nowebp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(20, 30, 60, 0.5); /* синьо-сіра прозорість */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-orange {
+  background-color: #f26727;
+  color: white;
+  padding: 15px 45px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-orange:hover {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #ffffff;
+  color:#f26727;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border-radius:5px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #f26727;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  padding: 14px 45px;
+  font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+  transition: transform 0.2s ease;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  background-color:#f26727;
+  color:white;
+}
+
+.event-section {
+  padding:50px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  justify-content: center;
+}
+
+.event-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.event-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.event-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.event-content h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.event-content .highlight {
+  color: #f37021;
+  font-weight: 600;
+  font-style: italic;
+  margin: 16px 0;
+  text-align:center;
+}
+
+.event-content p {
+  margin-bottom: 16px;
+  line-height:24px;
+}
+
+.services-section {
+  padding:20px;
+  background-color:#FAFAFA;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.services-section .subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-item {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.service-item span {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.slider-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.slider-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 33.3333%; /* За замовчуванням 3 слайди */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.caption {
+  background: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  position:relative;
+  bottom:70px;
+  height:25px;
+  width:250px;
+  margin: 0 auto;
+  align-items:center;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.nav-btn.left {
+  color:#FF9852;
+  left: 10px;
+}
+
+.nav-btn.right {
+  color:#FF9852;
+  right: 10px;
+}
+
+.event-images img{
+  width:200px;
+  height:200px;
+  border-radius:0;
+}
+
+.hero1 {
+  background: url('https://github.com/StaveR1/10thFloor/blob/main/7.jpg?raw=true') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4); /* затемнення */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.services{
+  text-align:center;
+}
+.container {
+  width: 100%;
+  max-width: 96%; /* Обмеження максимальної ширини */
+  margin: 0 auto;
+  padding: 60px 30px; /* Збільшив внутрішній відступ */
+  background-color: #202020;
+  border-radius: 12px; /* Більші заокруглені кути */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Більш виразна тінь */
+  text-align:left;
+}
+
+.container h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 40px; /* Збільшений розмір заголовка FAQ */
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.container h2 {
+  text-align: center;
+  color: #dddddd;
+  font-size: 24px; /* Збільшений розмір підзаголовка FAQ */
+  font-weight: 500;
+  margin-bottom: 50px; /* Збільшений відступ до FAQ сітки */
+}
+
+/* Сітка FAQ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* За замовчуванням одна колонка для мобільних */
+  gap: 25px; /* Відступ між елементами */
+}
+
+@media (min-width: 768px) {
+  .faq-grid {
+      grid-template-columns: 1fr 1fr; /* Дві колонки для планшетів та десктопів */
+      gap: 30px; /* Більший відступ для десктопів */
+      align-items: start
+  }
+}
+
+.faq-item {
+  background-color: #2a2a2a;
+  border-radius: 10px; /* Заокруглення кутів елементів FAQ */
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Виразна тінь для елементів */
+}
+
+.faq-item.full-width {
+  grid-column: 1 / -1; /* Розтягує елемент на всю ширину сітки */
+}
+
+.faq-item:hover {
+  background-color: #333333;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); /* Тінь при наведенні */
+}
+
+/* Питання FAQ */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px; /* Збільшив внутрішні відступи */
+  font-size: 18px; /* Збільшив розмір шрифту питання */
+  font-weight: 600; /* Зробив шрифт трохи товстішим */
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Більш видима лінія */
+  transition: color 0.3s ease;
+}
+/* Стиль для 5-ї кнопки (збільшена висота) */
+.faq-question.large-question {
+  padding: 30px 30px; /* Збільшуємо верхній та нижній відступи для більшої висоти */
+  font-size: 20px; /* Можливо, трохи більший шрифт для великої кнопки */
+}
+
+.faq-question:hover {
+  color: #f7a70c; /* Помаранчевий колір при наведенні */
+}
+
+.faq-question .arrow {
+  font-size: 22px; /* Збільшив розмір стрілки */
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #999999; /* Сірий колір стрілки */
+}
+
+.faq-question.active .arrow {
+  transform: rotate(180deg);
+  color: #f7a70c; /* Помаранчевий колір стрілки при активному стані */
+}
+
+/* Відповідь FAQ */
+.faq-answer {
+  padding: 0 30px; /* Збільшив внутрішні відступи */
+  font-size: 16px; /* Збільшив розмір шрифту відповіді */
+  color: #cccccc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Збільшив тривалість переходу */
+  line-height: 1.7; /* Поліпшений міжрядковий інтервал */
+}
+
+.faq-answer.open {
+  max-height: 800px; /* Збільшив max-height для довгих відповідей, може знадобитися додаткове налаштування */
+  padding: 20px 30px 30px; /* Відступи для відкритої відповіді */
+}
+
+.faq-answer ul {
+  list-style-type: disc;
+  margin: 10px 0 10px 20px; /* Відступи для списків */
+  padding: 0;
+}
+
+.faq-answer li {
+  margin-bottom: 8px;
+}
+
+.faq-answer li:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer p {
+  margin-bottom: 10px;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer span.price {
+  color: #f7a70c;
+  font-weight: 700; /* Зробив ціну жирнішою */
+}
+
+/* Кнопка "ПОДАТИ ЗАЯВКУ" */
+.button-container {
+  text-align: center;
+  margin-top: 80px; /* Збільшив відступ до кнопки */
+}
+
+
+/* Адаптивність */
+@media (max-width: 992px) {
+  .container {
+      padding: 50px 20px;
+  }
+  .container h1 {
+      font-size: 34px;
+  }
+  .container h2 {
+      font-size: 20px;
+  }
+  .faq-question {
+      font-size: 17px;
+      padding: 18px 25px;
+  }
+  /* Адаптивний стиль для 5-ї кнопки */
+  .faq-question.large-question {
+    padding: 25px 25px; /* Зменшуємо відступи на середніх екранах */
+  }
+  .faq-answer {
+      font-size: 15px;
+      padding: 0 25px;
+  }
+  .faq-answer.open {
+      padding: 15px 25px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-content h1 {
+      font-size: 2.5em;
+  }
+  .hero-content p {
+      font-size: 1.2em;
+  }
+  .event-section {
+      padding: 30px 15px;
+      flex-direction: column; /* Стовпцевий вигляд для секції подій */
+  }
+  .event-images {
+      grid-template-columns: 1fr; /* Один стовпець для зображень подій */
+      max-width: 100%;
+  }
+  .event-images img {
+      width: 100%;
+      height: auto;
+  }
+  .event-content {
+      max-width: 100%;
+  }
+  .services-section {
+      padding: 30px 15px;
+  }
+  .grid-container {
+      grid-template-columns: 1fr; /* Один стовпець для послуг */
+  }
+  .slider-section {
+      padding: 30px 15px;
+  }
+  .slide {
+      flex: 0 0 100%; /* Один слайд на мобільних */
+  }
+  .slide img {
+      height: 300px; /* Зменшена висота зображень слайдера */
+  }
+  .caption {
+      width: 90%; /* Адаптивна ширина для підпису */
+      bottom: 40px; /* Коригування позиції підпису */
+  }
+  .nav-btn {
+      font-size: 24px;
+      padding: 8px;
+  }
+  .hero1 .content h1 {
+      font-size: 2.5rem; /* Зменшення розміру шрифту для hero1 */
+  }
+  .hero1 .content p {
+      font-size: 1rem;
+  }
+  .container {
+    width: 90%;
+    max-width: 100%; /* Обмеження максимальної ширини */
+    padding: 30px 15px; /* Зменшення внутрішнього відступу */
+  }
+
+  .container h1 {
+    font-size: 30px; /* Зменшення розміру заголовка FAQ */
+  }
+
+  .container h2 {
+    font-size: 18px; /* Зменшення розміру підзаголовка FAQ */
+    margin-bottom: 30px;
+  }
+  .faq-question {
+      font-size: 16px;
+      padding: 15px 20px;
+  }
+
+  /* Адаптивний стиль для 5-ї кнопки */
+  .faq-question.large-question {
+      padding: 20px 20px; /* Зменшуємо відступи на малих екранах */
+  }
+  .faq-answer {
+      font-size: 14px;
+      padding: 0 20px;
+  }
+  .faq-answer.open {
+      padding: 10px 20px 20px;
+  }
+  .button-container {
+      margin-top: 50px;
+  }
+
+  .services img {
+      max-width: 95%; /* Більша ширина для мобільних */
+  }
+
+  /* Виправлення позиціонування адреси */
+  .contact-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
+  .madtext {
+      width: 100%;
+      height: 300px; /* Зменшена висота карти на мобільних */
+      margin-bottom: 20px; /* Відступ між картою та адресою */
+  }
+  .adress-block { /* Змінено назву класу для уникнення конфліктів */
+      position: static; /* Видалено абсолютне позиціонування */
+      top: auto;
+      right: auto;
+      background-color:#202020;
+      border-radius: 15px;
+      padding:30px;
+      color:white;
+      width: 90%; /* Адаптивна ширина */
+      max-width: 400px; /* Максимальна ширина для блоку адреси */
+  }
+  .footer-content {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+  }
+  .footer-column {
+      min-width: unset; /* Скидаємо min-width */
+      width: 100%;
+  }
+  .footer-column ul {
+      text-align: center;
+  }
+  .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+      font-size: 2em;
+  }
+  .hero-content p {
+      font-size: 1em;
+  }
+  .event-section, .services-section, .slider-section {
+      padding: 20px 10px;
+  }
+  .hero1 .content h1 {
+      font-size: 2rem;
+  }
+  .hero1 .content p {
+      font-size: 0.9rem;
+  }
+  .container {
+      padding: 20px 10px;
+  }
+  .container h1 {
+      font-size: 24px;
+  }
+  .container h2 {
+      font-size: 16px;
+  }
+  .faq-question {
+      font-size: 14px;
+      padding: 12px 15px;
+  }
+  .faq-question.large-question {
+      padding: 15px 15px;
+  }
+  .faq-answer {
+      font-size: 13px;
+      padding: 0 15px;
+  }
+  .faq-answer.open {
+      padding: 8px 15px 15px;
+  }
+  .button-container {
+      margin-top: 30px;
+  }
+  .adress-block {
+      padding: 20px;
+  }
+}
+
+
+.button-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.site-footer {
+  background-color: #fff;
+  color: #333;
+  padding: 40px 20px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #1e1e1e;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #f26727;
+}
+
+.footer-column.brand p {
+  color: #666;
+  margin-top: 5px;
+}
+
+.footer-column.social p {
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-align:center;
+}
+.social-icons {
+  text-align:center;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 6px;
+  border: 1px solid #f26727;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.social-icons a img {
+  width: 20px;
+  height: 20px;
+  filter: invert(42%) sepia(89%) saturate(1916%) hue-rotate(354deg) brightness(99%) contrast(98%);
+}
+
+.social-icons a:hover {
+  background-color: #ff6600;
+}
+
+.social-icons a:hover img {
+  filter: invert(100%);
+}
+
+hr {
+  margin: 30px auto 20px;
+  max-width: 1200px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.footer-bottom a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+/* Стилі для секції з картою та адресою */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Вирівнювання по верхньому краю */
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+    padding: 50px 20px;
+    gap: 40px; /* Відступ між картою та блоком адреси */
+}
+
+.madtext {
+    width: 100%; /* Ширина карти */
+    max-width: 800px; /* Максимальна ширина карти */
+    height: 500px;
+    border: none; /* Прибираємо рамку iframe */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Тінь для карти */
+}
+
+.adress-block { /* Змінено назву класу для уникнення конфліктів */
+    background-color: #202020;
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    flex-grow: 1; /* Дозволяє блоку рости */
+    max-width: 400px; /* Максимальна ширина для блоку адреси */
+}
+
+.adress-block h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.adress-block h4 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #f26727;
+}
+
+.adress-block p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
