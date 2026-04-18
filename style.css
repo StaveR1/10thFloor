@@ -40,25 +40,24 @@ nav{
   justify-content: space-between;
   height:70px;
   align-items:center;
-  padding: 0 20px; /* Додано відступи для навігації */
+  padding: 0 20px; 
 }
 nav a:hover{
   color:#ff6600;
 }
 
-/* Стилі для гамбургер-меню */
+
 .hamburger {
-    display: none; /* Приховано за замовчуванням на великих екранах */
+    display: none; 
     font-size: 28px;
     cursor: pointer;
-    color: #333; /* Колір іконки */
+    color: #333; 
 }
 
 .nav-links {
     display: flex;
 }
 
-/* Медіа-запит для мобільних пристроїв */
 @media (max-width: 768px) {
     .black_link {
         flex-direction: column;
@@ -74,7 +73,7 @@ nav a:hover{
     }
 
     nav {
-        flex-direction: row; /* Залишаємо лого та гамбургер в одному рядку */
+        flex-direction: row; 
         justify-content: space-between;
         padding: 10px 20px;
         height: auto;
@@ -84,21 +83,21 @@ nav a:hover{
         margin-left: 0;
     }
     .hamburger {
-        display: block; /* Показати гамбургер-меню на мобільних */
+        display: block; 
     }
     .nav-links {
         display: none; /* Приховати посилання за замовчуванням */
         flex-direction: column;
         width: 100%;
-        background-color: #f8f8f8; /* Фон для відкритого меню */
+        background-color: #f8f8f8; 
         position: absolute;
-        top: 60px; /* Під навігацією */
+        top: 60px; 
         left: 0;
         z-index: 1000;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
     .nav-links.active {
-        display: flex; /* Показати посилання при активному меню */
+        display: flex; 
     }
     .nav-links a {
         padding: 15px 20px;
@@ -127,7 +126,7 @@ nav a:hover{
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(20, 30, 60, 0.5); /* синьо-сіра прозорість */
+  background: rgba(20, 30, 60, 0.5); 
   z-index: 1;
 }
 
@@ -324,7 +323,7 @@ nav a:hover{
 }
 
 .slide {
-  flex: 0 0 33.3333%; /* За замовчуванням 3 слайди */
+  flex: 0 0 33.3333%;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -385,7 +384,7 @@ nav a:hover{
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.4); /* затемнення */
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;
@@ -429,20 +428,20 @@ nav a:hover{
 
 .container {
   width: 100%;
-  max-width: 96%; /* Обмеження максимальної ширини */
+  max-width: 96%; 
   margin: 0 auto;
-  padding: 60px 30px; /* Збільшив внутрішній відступ */
+  padding: 60px 30px; 
   background-color: #202020;
-  border-radius: 12px; /* Більші заокруглені кути */
+  border-radius: 12px; 
   box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Більш виразна тінь */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   text-align:left;
 }
 
 .container h1 {
   text-align: center;
   color: #ffffff;
-  font-size: 40px; /* Збільшений розмір заголовка FAQ */
+  font-size: 40px; 
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -450,42 +449,41 @@ nav a:hover{
 .container h2 {
   text-align: center;
   color: #dddddd;
-  font-size: 24px; /* Збільшений розмір підзаголовка FAQ */
+  font-size: 24px; 
   font-weight: 300;
-  margin-bottom: 50px; /* Збільшений відступ до FAQ сітки */
+  margin-bottom: 50px; 
 }
 
-/* Сітка FAQ */
 .faq-grid {
   display: grid;
-  grid-template-columns: 1fr; /* За замовчуванням одна колонка для мобільних */
-  gap: 25px; /* Відступ між елементами */
+  grid-template-columns: 1fr; 
+  gap: 25px; 
 }
 
 @media (min-width: 768px) {
   .faq-grid {
-      grid-template-columns: 1fr 1fr; /* Дві колонки для планшетів та десктопів */
-      gap: 30px; /* Більший відступ для десктопів */
+      grid-template-columns: 1fr 1fr;
+      gap: 30px; 
       align-items: start
   }
 }
 
 .faq-item {
   background-color: #2a2a2a;
-  border-radius: 10px; /* Заокруглення кутів елементів FAQ */
+  border-radius: 10px;
   overflow: hidden;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Виразна тінь для елементів */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); 
 }
 
 .faq-item.full-width {
-  grid-column: 1 / -1; /* Розтягує елемент на всю ширину сітки */
+  grid-column: 1 / -1; 
 }
 
 .faq-item:hover {
   background-color: #333333;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); /* Тінь при наведенні */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* Питання FAQ */
@@ -493,55 +491,55 @@ nav a:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px; /* Збільшив внутрішні відступи */
-  font-size: 18px; /* Збільшив розмір шрифту питання */
-  font-weight: 400; /* Зробив шрифт трохи товстішим */
+  padding: 20px 30px;
+  font-size: 18px; 
+  font-weight: 400;
   color: #ffffff;
   cursor: pointer;
   user-select: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Більш видима лінія */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
   transition: color 0.3s ease;
 }
-/* Стиль для 5-ї кнопки (збільшена висота) */
+
 .faq-item.large-question .faq-question {
-  padding: 30px 30px; /* Збільшуємо верхній та нижній відступи для більшої висоти */
-  font-size: 18px; /* Можливо, трохи більший шрифт для великої кнопки */
+  padding: 30px 30px; 
+  font-size: 18px; 
 }
 
 .faq-question:hover {
-  color: #f7a70c; /* Помаранчевий колір при наведенні */
+  color: #f7a70c; 
 }
 
 .faq-question .arrow {
-  font-size: 22px; /* Збільшив розмір стрілки */
+  font-size: 22px; 
   transition: transform 0.3s ease, color 0.3s ease;
-  color: #999999; /* Сірий колір стрілки */
+  color: #999999; 
 }
 
 .faq-question.active .arrow {
   transform: rotate(180deg);
-  color: #f7a70c; /* Помаранчевий колір стрілки при активному стані */
+  color: #f7a70c; 
 }
 
-/* Відповідь FAQ */
+
 .faq-answer {
-  padding: 0 30px; /* Збільшив внутрішні відступи */
-  font-size: 16px; /* Збільшив розмір шрифту відповіді */
+  padding: 0 30px;
+  font-size: 16px; 
   color: #cccccc;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Збільшив тривалість переходу */
-  line-height: 1.7; /* Поліпшений міжрядковий інтервал */
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; 
+  line-height: 1.7; 
 }
 
 .faq-answer.open {
-  max-height: 800px; /* Збільшив max-height для довгих відповідей, може знадобитися додаткове налаштування */
-  padding: 20px 30px 30px; /* Відступи для відкритої відповіді */
+  max-height: 800px; 
+  padding: 20px 30px 30px;
 }
 
 .faq-answer ul {
   list-style-type: disc;
-  margin: 10px 0 10px 20px; /* Відступи для списків */
+  margin: 10px 0 10px 20px;
   padding: 0;
 }
 
@@ -563,17 +561,14 @@ nav a:hover{
 
 .faq-answer span.price {
   color: #f7a70c;
-  font-weight: 500; /* Зробив ціну жирнішою */
+  font-weight: 500; 
 }
 
-/* Кнопка "ПОДАТИ ЗАЯВКУ" */
 .button-container {
   text-align: center;
-  margin-top: 80px; /* Збільшив відступ до кнопки */
+  margin-top: 80px;
 }
 
-
-/* Адаптивність */
 @media (max-width: 992px) {
   .container {
       padding: 50px 20px;
@@ -588,9 +583,8 @@ nav a:hover{
       font-size: 17px;
       padding: 18px 25px;
   }
-  /* Адаптивний стиль для 5-ї кнопки */
   .faq-item.large-question .faq-question {
-    padding: 25px 25px; /* Зменшуємо відступи на середніх екранах */
+    padding: 25px 25px; 
   }
   .faq-answer {
       font-size: 15px;
@@ -610,10 +604,10 @@ nav a:hover{
   }
   .event-section {
       padding: 30px 15px;
-      flex-direction: column; /* Стовпцевий вигляд для секції подій */
+      flex-direction: column; 
   }
   .event-images {
-      grid-template-columns: 1fr 1fr; /* Два стовпці для зображень подій */
+      grid-template-columns: 1fr 1fr; 
       max-width: 100%;
   }
   .event-content {
@@ -623,20 +617,20 @@ nav a:hover{
       padding: 30px 15px;
   }
   .grid-container {
-      grid-template-columns: 1fr; /* Один стовпець для послуг */
+      grid-template-columns: 1fr; 
   }
   .slider-section {
       padding: 30px 15px;
   }
   .slide {
-      flex: 0 0 100%; /* Один слайд на мобільних */
+      flex: 0 0 100%; 
   }
   .slide img {
-      height: 450px; /* Зменшена висота зображень слайдера */
+      height: 450px; 
   }
   .caption {
-      width: 90%; /* Адаптивна ширина для підпису */
-      bottom: 55px; /* Коригування позиції підпису */
+      width: 90%; 
+      bottom: 55px;
       height: auto;
       padding: 15px;
   }
@@ -645,23 +639,23 @@ nav a:hover{
       padding: 8px;
   }
   .hero1 .content h1 {
-      font-size: 2.5rem; /* Зменшення розміру шрифту для hero1 */
+      font-size: 2.5rem;
   }
   .hero1 .content p {
       font-size: 1rem;
   }
   .container {
     width: 90%;
-    max-width: 100%; /* Обмеження максимальної ширини */
-    padding: 30px 15px; /* Зменшення внутрішнього відступу */
+    max-width: 100%;
+    padding: 30px 15px; 
   }
 
   .container h1 {
-    font-size: 30px; /* Зменшення розміру заголовка FAQ */
+    font-size: 30px; 
   }
 
   .container h2 {
-    font-size: 18px; /* Зменшення розміру підзаголовка FAQ */
+    font-size: 18px; 
     margin-bottom: 30px;
   }
   .faq-question {
@@ -670,7 +664,7 @@ nav a:hover{
   }
 
   .faq-item.large-question .faq-question {
-      padding: 20px 20px; /* Зменшуємо відступи на малих екранах */
+      padding: 20px 20px;
   }
   .faq-answer {
       font-size: 14px;
@@ -696,8 +690,8 @@ nav a:hover{
   }
   .madtext {
       width: 100%;
-      height: 300px; /* Зменшена висота карти на мобільних */
-      margin-bottom: 20px; /* Відступ між картою та адресою */
+      height: 300px; 
+      margin-bottom: 20px; 
   }
   .adress-absolute {
       position: static;
@@ -715,7 +709,7 @@ nav a:hover{
       text-align: center;
   }
   .footer-column {
-      min-width: unset; /* Скидаємо min-width */
+      min-width: unset;
       width: 100%;
   }
   .footer-column ul {
@@ -885,7 +879,7 @@ hr {
   text-decoration: none;
 }
 
-/* Стилі для секції з картою та адресою */
+
 .contact-section {
     position: relative;
     padding: 50px 0 0 0;
@@ -928,7 +922,7 @@ hr {
     margin-bottom: 10px;
     line-height: 1.5;
 }
-/* Animation for scroll-in elements */
+
 .scroll-in-animation {
   opacity: 0;
   transform: translateY(50px);
